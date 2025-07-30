@@ -1,5 +1,5 @@
 import { createInterface, type Interface } from "readline";
-import { getCommands } from "./command.js";
+import { getCommands } from "./commands.js";
 
 export type CLICommand = {
   name: string;
@@ -18,7 +18,7 @@ export function initState() {
     readline: createInterface({
       input: process.stdin,
       output: process.stdout,
-      prompt: "Pokedex > ",
+      prompt: "pokedex > ",
     }),
   };
 }
